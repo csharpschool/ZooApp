@@ -1,0 +1,24 @@
+﻿@page "/zoo"
+@using global::Zoo.Data;
+@inject AnimalData ad;
+
+<h3>Zoo</h3>
+
+<ul>
+    @foreach (var a in ad.GetAnimals(false))
+    {
+        <li class="list-group-item list-group-item-@(a.Predator ? "danger" : "success")">
+            @a.AnimalType @(a.Predator ? "is a predator." : "ia a carnevore.")</li>
+    }
+</ul>
+
+@code {
+    /*AnimalData ad = new();
+    List<Animal> animals = new();
+
+    protected override void OnInitialized()
+    {
+        foreach (var a in ad.GetAnimals(false))
+            animals.Add(a);
+    }*/
+}

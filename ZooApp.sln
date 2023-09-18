@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooApp", "ZooApp\ZooApp.csproj", "{D6729574-FECD-40EC-91C3-088E2BA0C9C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoo.Common", "Zoo.Common\Zoo.Common.csproj", "{41474BE3-1A62-4EEC-A210-86FAB33755E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoo.Data", "Zoo.Data\Zoo.Data.csproj", "{178AAB98-BC9B-48F1-8C98-E59E9968FE5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6729574-FECD-40EC-91C3-088E2BA0C9C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6729574-FECD-40EC-91C3-088E2BA0C9C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6729574-FECD-40EC-91C3-088E2BA0C9C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6729574-FECD-40EC-91C3-088E2BA0C9C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41474BE3-1A62-4EEC-A210-86FAB33755E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41474BE3-1A62-4EEC-A210-86FAB33755E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41474BE3-1A62-4EEC-A210-86FAB33755E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41474BE3-1A62-4EEC-A210-86FAB33755E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178AAB98-BC9B-48F1-8C98-E59E9968FE5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178AAB98-BC9B-48F1-8C98-E59E9968FE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178AAB98-BC9B-48F1-8C98-E59E9968FE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178AAB98-BC9B-48F1-8C98-E59E9968FE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {121BEC1C-18B8-48CD-8236-0D62F9D10479}
+	EndGlobalSection
+EndGlobal
