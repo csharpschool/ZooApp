@@ -6,10 +6,10 @@ namespace Zoo.Data;
 public class AnimalData
 {
     Animal[] Animals { get; init; } = new[] {
-        new Animal("Lion", true),
-        new Animal("Giraffe", false),
-        new Animal("Quagga", false),
-        new Animal("Tiger", true)
+        new Animal(1, "Lion", true),
+        new Animal(2, "Giraffe", false),
+        new Animal(3, "Quagga", false),
+        new Animal(4, "Tiger", true)
     };
 
     public AnimalData()
@@ -22,4 +22,18 @@ public class AnimalData
             if(animal.Predator.Equals(isPreadator))
                 yield return animal;
     }
+
+    public void FeedAnimal(int id)
+    {
+        var animal = Animals.SingleOrDefault(a => a.Id == id);
+        if (animal is null) return;
+        animal.Feed("Apple");
+    }
+    public void PetAnimal(int id)
+    {
+        var animal = Animals.SingleOrDefault(a => a.Id == id);
+        if (animal is null) return;
+        animal.Pet();
+    }
+
 }

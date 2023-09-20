@@ -3,16 +3,43 @@
 @inject AnimalData ad;
 
 <h3>New Zoo App</h3>
+<button class="btn btn-danger" @onclick="@(() => Get(true))">Predators</button>
+<button class="btn btn-success" @onclick="@(() => Get(false))">Herbivore</button>
 
-<ul>
-    @foreach (var a in ad.GetAnimals(false))
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Animal</th>
+            <th scope="col">Predator</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var a in ad.GetAnimals(Predator))
     {
-        <li class="list-group-item list-group-item-@(a.Predator ? "danger" : "success")">
-            @a.AnimalType @(a.Predator ? "is a predator." : "ia a carnevore.")</li>
+        <tr>
+            <th scope="row">@a.Id</th>
+            <td>@a.AnimalType</td>
+            <td>@(a.Predator ? "Predator." : "Herbivore.")</td>
+            <td>
+                    <button class="btn btn-primary" @onclick="@(() => ad.FeedAnimal(a.Id))">Feed</button>
+                    <button class="btn btn-success" @onclick="@(() => ad.PetAnimal(a.Id))">Pet</button>
+                </td>
+        </tr>
     }
-</ul>
+    </tbody>
+
+</table>
 
 @code {
+    public bool Predator { get; set; }
+
+    void Get(bool predator)
+    {
+        Predator = predator;
+
+    }
     /*AnimalData ad = new();
     List<Animal> animals = new();
 
